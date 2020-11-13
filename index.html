@@ -1,74 +1,62 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
+
     <title>Tip Calculator</title>
-    <!-- Required meta tags -->
+    <!---Meta Tags--->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!---Bootstrap--->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-
 
   </head>
   <body class="bg-dark">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <div class="card card-body text-center mt-5">
-            <h1 class="heading display-5 pb-3">Tip Calculator</h1>
-            <form id="tip-form">
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">$</span>
-                  <input type="number" class="form-control" id="billTotal" placeholder="Total Bill">
-                </div>
-              </div>
-              <div class="form-group tipPersent">
-                <div class="input-group">
-                  <label for="">Tip:</label>
+    <h1 class="Header">Tip Calculator</h1>
 
-
-                  <input type="range" class="form-control" id="tipInput" value="0">
-                  <span class="input-group-addon" id="tipOutput"></span>
-                </div>
-              </div>
-
-
-
-            </form>
-            <hr>
-
-            <!-- RESULTS -->
-            <div id="results" class="pt-4">
-              <h5>Results</h5>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">Tip amount</span>
-                  <input type="number" class="form-control" id="tipAmount" disabled>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">Total Bill with Tip</span>
-                  <input type="number" class="form-control" id="totalBillWithTip" disabled>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
+    <!---Start Input--->
+    <div class="card card-body text-center" style="width: 35rem;">
+      <h6 class="q1">What was your total bill cost?</h6>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-addon">$</span>
         </div>
+        <input type="number" class="form-control" id="billTotal" placeholder="Total Bill Cost">
+      </div>
+      <h6 class="q2">Enter the percentage of tip you would like to give:</h6>
+      <div class="input-group mb-3">
+        <div class="input-group-append">
+          <span class="input-group-addon">Tip</span>
+        </div>
+        <input type="number" class="form-control" id="tipAmount" placeholder="Percentage">
+      </div>
+      <button type="button" class="btn btn-success" id="subButton">Submit</button>
+    </div>
+    <!---End Input--->
+
+    <!---Start Result Printer--->
+    <div class="card card-body text-center" style="width: 35rem;">
+      <h6>Results</h6>
+      <div id="results">
+        <div class="input-group">
+          <span class="input-group-addon">Bill amount:</span>
+          <input type="number" class="form-control" id="totalBill" readonly>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">Tip amount:</span>
+          <input type="number" class="form-control" id="tipTotal" readonly>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">Total:</span>
+          <input type="number" class="form-control" id="grandTotal" readonly>
+        </div>
+        <a href="index.html" type="button" class="btn btn-success" id='resetButton'>Reset</a>
       </div>
     </div>
+    <!---End Result Printer--->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="index.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
   </body>
-</html> 
+</html>
