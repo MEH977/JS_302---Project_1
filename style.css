@@ -1,3 +1,13 @@
-#results {
-  display:none;
+.Header{
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+.card{
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 45px;
+}
+#resetButton{
+  margin-top: 15px;
 }
